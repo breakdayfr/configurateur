@@ -1,0 +1,12 @@
+import { create } from 'zustand';
+
+interface ConfiguratorState {
+  color: string;
+  setColor: (color: string) => void;
+  // Nous ajouterons les textures, textes et options ici plus tard
+}
+
+export const useConfigurator = create<ConfiguratorState>((set) => ({
+  color: '#ffffff', // Couleur par défaut (blanc)
+  setColor: (color) => set({ color }),
+}));
